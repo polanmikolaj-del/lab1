@@ -7,7 +7,7 @@ b = float(input("Podaj b: "))
 c = float(input("Podaj c: "))
 
 if a == 0:
-    # Równanie przestaje być kwadratowe
+
     if b == 0:
         if c == 0:
             print("Równanie tożsamościowe – nieskończenie wiele rozwiązań.")
@@ -17,7 +17,7 @@ if a == 0:
         x = -c / b
         print(f"Równanie liniowe. Rozwiązanie: x = {x}")
 else:
-    # Prawdziwe równanie kwadratowe
+
     delta = b**2 - 4*a*c
     print(f"Delta = {delta}")
 
