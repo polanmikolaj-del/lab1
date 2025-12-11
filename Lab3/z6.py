@@ -1,9 +1,9 @@
 rachunki = {
-    "styczeń": 220.50,
-    "luty": 198.30,
-    "marzec": 245.10,
-    "kwiecień": 210.00,
-    "maj": 260.75
+    "styczeń": 455.56,
+    "luty": 298.50,
+    "marzec": 446.10,
+    "kwiecień": 310.00,
+    "maj": 230.75
 }
 wartosci = list(rachunki.values())
 

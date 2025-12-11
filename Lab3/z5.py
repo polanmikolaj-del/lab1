@@ -1,7 +1,7 @@
 zakupy = {
-    "chleb": 4.50,
-    "mleko": 3.20,
-    "masło": 8.90,
+    "chleb": 8.50,
+    "mleko": 1.20,
+    "masło": 9.99,
     "ser": 7.30
 }
 

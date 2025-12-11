@@ -1,33 +1,46 @@
 import random
-n = int(input("jak długa ma być ta lista: "))
-x = int(input("jak długie mogą to być słowa: "))
-lista=[]
-d=0
-alfabet: list[str] = ["a", "b", "c", "d", "e", "f"]
+
+n = int(input("n (ile wyrazów): "))
+x = int(input("x (max długość wyrazu): "))
+
+alf = "abcdefghijklmnopqrstuvwxyz"
+L = []
+
 for i in range(n):
-    d=random.randint(1,x)
-    slowo=''
+    d = random.randint(1, x)
+    w = ""
     for j in range(d):
-        z=random.randint(0, len(alfabet))
-        slowo+=alfabet[z]
-        #print(slowo)
-        #lista.append(f" . {i} o długosci {d}: {slowo}")
+        w += random.choice(alf)
+    L.append(w)
 
-        lista.append(slowo)
-        print(lista)
-        krotka=tuple(lista)
+print("L:", L)
 
-        #a
-        suma=0
-        for slowo in krotka:
-            suma += len(slowo)
-        print(suma)
+K = tuple(L)
+print("K:", K)
 
-        #b
-        liczba_k = 0
-        for slowo in krotka:
-            for znak in slowo:
-                if znak == "k":
-                    suma_k+=1
-                #else
-            print(liczba_k)
+suma = 0
+for w in K:
+    suma += len(w)
+
+print("a) ilość znaków:", suma)
+
+cnt_k = 0
+for w in K:
+    cnt_k += w.count("k")
+
+print("b) liczba liter 'k':", cnt_k)
+
+cnt_kt = 0
+for w in K:
+    cnt_kt += w.count("kt")
+
+print("c) liczba 'kt':", cnt_kt)
+
+s = int(input("s: "))
+
+cnt_dl = 0
+for w in K:
+    if len(w) > s:
+        cnt_dl += 1
+
+print("d) liczba wyrazów dłuższych niż", s, ":", cnt_dl)
